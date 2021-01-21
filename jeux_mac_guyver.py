@@ -3,6 +3,15 @@ import random
 from pygame.locals import *
 from sys import exit
 
+# enlever self
+WALL = 'W'
+MC_GYVER = 'M'
+GROUND = ' '
+AIGUILLE = '01'
+TUBE = '03'
+ETHER = '02'
+GUARDIAN = 'G'
+
 
 class Ground:
     def __init__(self, map_file, nb_spritesX=15, nb_spritesY=15, size_sprite=70):
@@ -16,7 +25,6 @@ class Ground:
         map_file = 'map_file.txt'
 
 
-
 class View():
     WALL = 'W'
     MC_GYVER = 'M'
@@ -26,7 +34,7 @@ class View():
     ETHER = '02'
     GUARDIAN = 'G'
 
-    def __init__(self, niveau, pos, size_sprite=60, nb_spritesX=15, nb_spritesY=15):
+    def __init__(self, niveau, size_sprite=60, nb_spritesX=15, nb_spritesY=15):
         self.sprite_background_img = 'ressource/floor-tiles-20x20 - sol.png'
         self.aiguille_img = 'ressource/aiguille.png'
         self.ether_img = 'ressource/ether.png'
@@ -49,9 +57,6 @@ class View():
         self.ether = pygame.image.load(self.ether_img).convert()
         self.player = pygame.image.load(self.Mc_Gyver_img).convert()
         self.niveau = niveau
-        self.pos = pos
-
-
 
     def draw(self):
 
@@ -63,8 +68,8 @@ class View():
                 y = num_l * self.size_sprite
                 if sprite == self.WALL:
                     self.screen.blit(self.walls, (x, y))
-                # elif sprite == 'M':
-                #   self.screen.blit(self.player, (x, y))
+                elif sprite == MC_GYVER:
+                    self.screen.blit(self.player, (x, y))
                 elif sprite == self.GUARDIAN:
                     self.screen.blit(self.guardian, (x, y))
                 elif sprite == self.AIGUILLE:
@@ -79,22 +84,11 @@ class View():
             num_l += 1
         print(self.niveau)
 
-    def draw_mc(self):
-        print(self.pos)
-        index_line, index_sprite = self.pos
-        y = index_line * self.size_sprite
-        x = index_sprite * self.size_sprite
-        self.screen.blit(self.player, (x, y))
-
 
 class Mc_Gyver():
     def __init__(self, niveau):
         self.niveau = niveau
         self.size_sprite = 60
-
-
-
-
 
 
 class Game:
@@ -109,48 +103,51 @@ class Game:
     def __init__(self):
         pygame.init()
 
-
-        self.niveau = self.read_map('map_file.txt')
-        self.pos = self.pos_to_matrix(self.niveau)
-        self.affi = View(self.niveau, self.pos)
-        #self.aiguille = Aiguille(self.niveau)
-        #self.tube = Tube()
-        #self.ether = Ether(self.niveau)
+        self.niveau = None
+        self.pos = None
+        self.load_map('map_file.txt')
+        self.affi = View(self.niveau)
+        self.place_obj()
         self.mc = Mc_Gyver(self.niveau)
 
     def place_obj(self):
-        empty_sprite = []
-        for index_line, line in enumerate(self.niveau):
-            for index_sprite, sprite in enumerate(line):
-                pos = (index_line, index_sprite)
-                if sprite == ' ':
-                    empty_sprite.append(pos)
-        ran_sprite = random.sample(empty_sprite, 3)
-        ya, xa = ran_sprite[0]
-        yt, xt = ran_sprite[1]
-        ye, xe = ran_sprite[2]
-        a_ran_line = self.niveau[ya]
-        a_ran_line[xa] = self.AIGUILLE
-        t_ran_line = self.niveau[yt]
-        t_ran_line[xt] = self.TUBE
-        e_ran_line = self.niveau[ye]
-        e_ran_line[xe] = self.ETHER
 
-    def pos_to_matrix(self, niveau):
-        for index_line, line in enumerate(niveau):
-            for index_sprite, sprite in enumerate(line):
-                if sprite == 'M':
+        ran_positions = random.sample(self.empty_sprites, 3)
+        ya, xa = ran_positions[0]
+        yt, xt = ran_positions[1]
+        ye, xe = ran_positions[2]
+        self.niveau[ya][xa] = AIGUILLE
+        self.niveau[yt][xt] = TUBE
+        self.niveau[ye][xe] = ETHER
+
+    def load_map(self, file):
+        with open(file, 'r') as f:
+            matrix_map = []
+            empty_sprites = []
+            pos_mcgyver = None
+
+            for index_line, line in enumerate(f):
+                line_fichier = []
+                for index_sprite, sprite in enumerate(line.strip("|").split("|")):
                     pos = (index_line, index_sprite)
+                    if sprite != '\n':
+                        line_fichier.append(sprite)
+                    if sprite == GROUND:
+                        empty_sprites.append(pos)
+                    elif sprite == MC_GYVER:
+                        pos_mcgyver = pos
+                matrix_map.append(line_fichier)
 
-        print(pos)
-        return pos
-    def moov(self):
-        index_line, index_sprite = self.pos
-        # print(index_line, index_sprite)
+        self.niveau = matrix_map
+        self.empty_sprites = empty_sprites
+        self.pos_mc = pos_mcgyver
 
+    def loop(self):
+
+        self.affi.draw()
         while True:
-
             for event in pygame.event.get():
+                index_line, index_sprite = self.pos_mc
                 if event.type == pygame.KEYDOWN:
                     if event.key == pygame.K_LEFT:
                         print('K_left')
@@ -161,39 +158,16 @@ class Game:
                         index_line += 1
                     if event.key == pygame.K_UP:
                         index_line -= 1
-            print('i_l', index_line, 'i_s', index_sprite)
-
-            pygame.display.flip()
-
-
-
-    def read_map(self, file):
-        with open(file, 'r') as f:
-            matrix_map = []
-
-            for line in f:
-                line_fichier = []
-                "enumerate"
-                for sprite in line.strip("|").split("|"):
-                    if sprite != '\n':
-                        line_fichier.append(sprite)
-                matrix_map.append(line_fichier)
-        return matrix_map
+                    self.niveau[self.pos_mc[0]][self.pos_mc[1]] = GROUND
+                    self.niveau[index_line][index_sprite] = MC_GYVER
+                    self.pos_mc = (index_line, index_sprite)
+                    self.affi.draw()
+                    print(self.pos_mc)
+                    print('i_l', index_line, 'i_s', index_sprite)
 
 
-    def loop(self):
-        jeux.place_obj()
-        self.affi.draw()
-        self.affi.draw_mc()
-        jeux.pos_to_matrix(self.niveau)
-        jeux.moov()
-        while True:
-            for event in pygame.event.get():
-
-                if event.type == QUIT:
-                    self.destroy()
-
-                # jeux.read_map('map_file.txt')
+            if event.type == QUIT:
+                self.destroy()
 
             pygame.display.update()
 

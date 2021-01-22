@@ -13,16 +13,6 @@ ETHER = '02'
 GUARDIAN = 'G'
 
 
-class Ground:
-    def __init__(self, map_file, nb_spritesX=15, nb_spritesY=15, size_sprite=70):
-        self.nb_spritesX, self.nb_spritesY = nb_spritesX, nb_spritesY
-        pygame.init()
-        self.size_sprite = size_sprite
-        self.nb_spritesX = nb_spritesX
-        self.nb_spritesY = nb_spritesY
-        self.nb_pixelsX = self.size_sprite * self.nb_spritesX
-        self.nb_pixelsY = self.size_sprite * self.nb_spritesY
-        map_file = 'map_file.txt'
 
 
 class View():
@@ -85,12 +75,6 @@ class View():
         print(self.niveau)
 
 
-class Mc_Gyver():
-    def __init__(self, niveau):
-        self.niveau = niveau
-        self.size_sprite = 60
-
-
 class Game:
     WALL = 'W'
     MC_GYVER = 'M'
@@ -108,7 +92,6 @@ class Game:
         self.load_map('map_file.txt')
         self.affi = View(self.niveau)
         self.place_obj()
-        self.mc = Mc_Gyver(self.niveau)
 
     def place_obj(self):
 
@@ -150,7 +133,6 @@ class Game:
                 index_line, index_sprite = self.pos_mc
                 if event.type == pygame.KEYDOWN:
                     if event.key == pygame.K_LEFT:
-                        print('K_left')
                         index_sprite -= 1
                     if event.key == pygame.K_RIGHT:
                         index_sprite += 1
@@ -158,10 +140,12 @@ class Game:
                         index_line += 1
                     if event.key == pygame.K_UP:
                         index_line -= 1
-                    self.niveau[self.pos_mc[0]][self.pos_mc[1]] = GROUND
-                    self.niveau[index_line][index_sprite] = MC_GYVER
-                    self.pos_mc = (index_line, index_sprite)
-                    self.affi.draw()
+                    if self.niveau[index_line][index_sprite] != WALL:
+                        self.niveau[index_line][index_sprite] = MC_GYVER
+                        self.niveau[self.pos_mc[0]][self.pos_mc[1]] = GROUND
+                        self.pos_mc = (index_line, index_sprite)
+                        self.affi.draw()
+
                     print(self.pos_mc)
                     print('i_l', index_line, 'i_s', index_sprite)
 

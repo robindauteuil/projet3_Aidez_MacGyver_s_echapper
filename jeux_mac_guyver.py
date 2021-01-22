@@ -155,40 +155,41 @@ class Game:
         while True:
             for event in pygame.event.get():
                 index_line, index_sprite = self.pos_mc
-                if event.type == pygame.KEYDOWN:
-                    if event.key == pygame.K_LEFT:
-                        index_sprite -= 1
-                    if event.key == pygame.K_RIGHT:
-                        index_sprite += 1
-                    if event.key == pygame.K_DOWN:
-                        index_line += 1
-                    if event.key == pygame.K_UP:
-                        index_line -= 1
-                    if self.niveau[index_line][index_sprite] != WALL:
-                        self.niveau[index_line][index_sprite] = MC_GYVER
-                        self.niveau[self.pos_mc[0]][self.pos_mc[1]] = GROUND
-                        self.pos_mc = (index_line, index_sprite)
-                        self.affi.draw()
+                if index_line >= 1 :
+                    if event.type == pygame.KEYDOWN:
+                        if event.key == pygame.K_LEFT:
+                            index_sprite -= 1
+                        if event.key == pygame.K_RIGHT:
+                            index_sprite += 1
+                        if event.key == pygame.K_DOWN:
+                            index_line += 1
+                        if event.key == pygame.K_UP:
+                            index_line -= 1
+                        if self.niveau[index_line][index_sprite] != WALL:
+                            self.niveau[index_line][index_sprite] = MC_GYVER
+                            self.niveau[self.pos_mc[0]][self.pos_mc[1]] = GROUND
+                            self.pos_mc = (index_line, index_sprite)
+                            self.affi.draw()
 
-                    if self.pos_aig == self.pos_mc:
-                        self.affi.draw_aig()
-                        self.pos_aig = 0
-                        back_pack += 1
-                    if self.pos_tube == self.pos_mc:
-                        self.affi.draw_tube()
-                        back_pack += 1
-                        self.pos_tube = 0
-                    if self.pos_ether == self.pos_mc:
-                        self.affi.draw_ether()
-                        back_pack += 1
-                        self.pos_ether = 0
-                    if back_pack == 3 :
-                        self.affi.draw_seringue()
-                    if self.pos_mc == self.pos_guard:
-                        if back_pack < 3:
-                            self.affi.draw_game_over()
-                        if back_pack >= 3:
-                            self.affi.draw_you_win()
+                        if self.pos_aig == self.pos_mc:
+                            self.affi.draw_aig()
+                            self.pos_aig = 0
+                            back_pack += 1
+                        if self.pos_tube == self.pos_mc:
+                            self.affi.draw_tube()
+                            back_pack += 1
+                            self.pos_tube = 0
+                        if self.pos_ether == self.pos_mc:
+                            self.affi.draw_ether()
+                            back_pack += 1
+                            self.pos_ether = 0
+                        if back_pack == 3 :
+                            self.affi.draw_seringue()
+                        if self.pos_mc == self.pos_guard:
+                            if back_pack < 3:
+                                self.affi.draw_game_over()
+                            if back_pack >= 3:
+                                self.affi.draw_you_win()
 
                     print(self.pos_guard)
                     print(self.pos_mc)

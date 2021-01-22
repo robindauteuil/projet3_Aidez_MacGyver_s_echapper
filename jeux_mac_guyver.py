@@ -32,12 +32,14 @@ class View():
         self.guardian_img = 'ressource/gardien.png'
         self.walls_img = 'ressource/floor-tiles-20x20-mur.png'
         self.Mc_Gyver_img = 'ressource/MacGyver.png'
-
+        self.seringue_img = 'ressource/seringue.png'
+        self.game_over_img = 'ressource/game_over.png'
+        self.you_win_img = 'ressource/you_win.png'
         self.nb_spritesX = nb_spritesX
         self.nb_spritesY = nb_spritesY
         self.size_sprite = size_sprite
         self.screen = pygame.display.set_mode(
-            (self.nb_spritesX * self.size_sprite, self.nb_spritesY * self.size_sprite), 0, 32)
+            ((self.nb_spritesX + 1) * self.size_sprite, self.nb_spritesY * self.size_sprite), 0, 32)
         pygame.display.set_caption("Jeux Mac Gyver")
         self.background = pygame.image.load(self.sprite_background_img).convert()
         self.walls = pygame.image.load(self.walls_img).convert()
@@ -46,6 +48,9 @@ class View():
         self.guardian = pygame.image.load(self.guardian_img).convert()
         self.ether = pygame.image.load(self.ether_img).convert()
         self.player = pygame.image.load(self.Mc_Gyver_img).convert()
+        self.seringue = pygame.image.load(self.seringue_img).convert()
+        self.game_over = pygame.image.load(self.game_over_img).convert()
+        self.you_win = pygame.image.load(self.you_win_img).convert()
         self.niveau = niveau
 
     def draw(self):
@@ -72,7 +77,18 @@ class View():
                     self.screen.blit(self.background, (x, y))
                 num_c += 1
             num_l += 1
-        print(self.niveau)
+    def draw_aig(self):
+        self.screen.blit(self.aiguille, (900, 120))
+    def draw_ether(self):
+        self.screen.blit(self.ether, (900, 240))
+    def draw_tube(self):
+        self.screen.blit(self.tube_plastique, (900, 360))
+    def draw_seringue(self):
+        self.screen.blit(self.seringue, (900, 480))
+    def draw_game_over(self):
+        self.screen.blit(self.game_over, ( 450, 450))
+    def draw_you_win(self):
+        self.screen.blit(self.you_win, (450, 450))
 
 
 class Game:
@@ -102,7 +118,9 @@ class Game:
         self.niveau[ya][xa] = AIGUILLE
         self.niveau[yt][xt] = TUBE
         self.niveau[ye][xe] = ETHER
-
+        self.pos_aig = (ya, xa)
+        self.pos_tube = (yt, xt)
+        self.pos_ether = (ye, xe)
     def load_map(self, file):
         with open(file, 'r') as f:
             matrix_map = []
@@ -117,6 +135,9 @@ class Game:
                         line_fichier.append(sprite)
                     if sprite == GROUND:
                         empty_sprites.append(pos)
+                    if sprite == GUARDIAN:
+                        pos_guard = pos
+
                     elif sprite == MC_GYVER:
                         pos_mcgyver = pos
                 matrix_map.append(line_fichier)
@@ -124,9 +145,12 @@ class Game:
         self.niveau = matrix_map
         self.empty_sprites = empty_sprites
         self.pos_mc = pos_mcgyver
+        self.pos_guard = pos_guard
+
 
     def loop(self):
 
+        back_pack = 0
         self.affi.draw()
         while True:
             for event in pygame.event.get():
@@ -146,12 +170,35 @@ class Game:
                         self.pos_mc = (index_line, index_sprite)
                         self.affi.draw()
 
+                    if self.pos_aig == self.pos_mc:
+                        self.affi.draw_aig()
+                        self.pos_aig = 0
+                        back_pack += 1
+                    if self.pos_tube == self.pos_mc:
+                        self.affi.draw_tube()
+                        back_pack += 1
+                        self.pos_tube = 0
+                    if self.pos_ether == self.pos_mc:
+                        self.affi.draw_ether()
+                        back_pack += 1
+                        self.pos_ether = 0
+                    if back_pack == 3 :
+                        self.affi.draw_seringue()
+                    if self.pos_mc == self.pos_guard:
+                        if back_pack < 3:
+                            self.affi.draw_game_over()
+                        if back_pack >= 3:
+                            self.affi.draw_you_win()
+
+                    print(self.pos_guard)
                     print(self.pos_mc)
-                    print('i_l', index_line, 'i_s', index_sprite)
+
 
 
             if event.type == QUIT:
                 self.destroy()
+
+
 
             pygame.display.update()
 

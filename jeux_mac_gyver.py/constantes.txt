@@ -1,0 +1,7 @@
+WALL = 'W'
+MC_GYVER = 'M'
+GROUND = ' '
+AIGUILLE = '01'
+TUBE = '03'
+ETHER = '02'
+GUARDIAN = 'G'

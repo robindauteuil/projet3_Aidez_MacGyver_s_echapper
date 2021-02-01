@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+jeux_mac_gyver/__init__.py
+jeux_mac_gyver/__main__.py
+jeux_mac_gyver/class_Game.py
+jeux_mac_gyver/class_View.py
+jeux_mac_gyver/constantes.py
+local_structure.egg-info/PKG-INFO
+local_structure.egg-info/SOURCES.txt
+local_structure.egg-info/dependency_links.txt
+local_structure.egg-info/top_level.txt

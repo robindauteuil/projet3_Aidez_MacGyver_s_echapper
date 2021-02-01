@@ -1,10 +1,8 @@
 import pygame
-import random
-from pygame.locals import *
-from sys import exit
-import constantes
+from jeux_mac_gyver import constantes
 
-class View():
+
+class View:
 
     def __init__(self, niveau, size_sprite=60, nb_spritesX=15, nb_spritesY=15):
         self.sprite_background_img = 'ressource/floor-tiles-20x20 - sol.png'
@@ -20,13 +18,15 @@ class View():
         self.nb_spritesX = nb_spritesX
         self.nb_spritesY = nb_spritesY
         self.size_sprite = size_sprite
-        self.screen = pygame.display.set_mode(
-            ((self.nb_spritesX + 1) * self.size_sprite, self.nb_spritesY * self.size_sprite), 0, 32)
+        self.screen = pygame.display.set_mode(((self.nb_spritesX + 1) * self.size_sprite, self.nb_spritesY * self.size_sprite), 0, 32)
         pygame.display.set_caption("Jeux Mac Gyver")
-        self.background = pygame.image.load(self.sprite_background_img).convert()
+        self.background = pygame.image.load(self.sprite_background_img) \
+            .convert()
         self.walls = pygame.image.load(self.walls_img).convert()
-        self.aiguille = pygame.image.load(self.aiguille_img).convert()
-        self.tube_plastique = pygame.image.load(self.tube_plastique_img).convert()
+        self.aiguille = pygame.image.load(self.aiguille_img) \
+            .convert()
+        self.tube_plastique = pygame.image.load(self.tube_plastique_img) \
+            .convert()
         self.guardian = pygame.image.load(self.guardian_img).convert()
         self.ether = pygame.image.load(self.ether_img).convert()
         self.player = pygame.image.load(self.Mc_Gyver_img).convert()
@@ -43,17 +43,17 @@ class View():
             for sprite in line:
                 x = num_c * self.size_sprite
                 y = num_l * self.size_sprite
-                if sprite == WALL:
+                if sprite == constantes.WALL:
                     self.screen.blit(self.walls, (x, y))
-                elif sprite == MC_GYVER:
+                elif sprite == constantes.MC_GYVER:
                     self.screen.blit(self.player, (x, y))
-                elif sprite == GUARDIAN:
+                elif sprite == constantes.GUARDIAN:
                     self.screen.blit(self.guardian, (x, y))
-                elif sprite == AIGUILLE:
+                elif sprite == constantes.AIGUILLE:
                     self.screen.blit(self.aiguille, (x, y))
-                elif sprite == ETHER:
+                elif sprite == constantes.ETHER:
                     self.screen.blit(self.ether, (x, y))
-                elif sprite == TUBE:
+                elif sprite == constantes.TUBE:
                     self.screen.blit(self.tube_plastique, (x, y))
                 else:
                     self.screen.blit(self.background, (x, y))

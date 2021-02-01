@@ -1,18 +1,15 @@
-import pygame
 import random
 from pygame.locals import *
-from sys import exit
-import constantes
-from class_View import View
-
-
+import pygame
+from jeux_mac_gyver import class_View as View
+from jeux_mac_gyver import constantes as constantes
 
 
 class Game:
 
     def __init__(self):
-        pygame.init()
 
+        pygame.init()
         self.niveau = None
         self.pos = None
         self.load_map('map_file.txt')
@@ -25,9 +22,9 @@ class Game:
         ya, xa = ran_positions[0]
         yt, xt = ran_positions[1]
         ye, xe = ran_positions[2]
-        self.niveau[ya][xa] = AIGUILLE
-        self.niveau[yt][xt] = TUBE
-        self.niveau[ye][xe] = ETHER
+        self.niveau[ya][xa] = constantes.AIGUILLE
+        self.niveau[yt][xt] = constantes.TUBE
+        self.niveau[ye][xe] = constantes.ETHER
         self.pos_aig = (ya, xa)
         self.pos_tube = (yt, xt)
         self.pos_ether = (ye, xe)
@@ -41,18 +38,19 @@ class Game:
 
             for index_line, line in enumerate(f):
                 line_fichier = []
-                for index_sprite, sprite in enumerate(line.strip("|").split("|")):
+                for index_sprite, \
+                    sprite in enumerate(line.strip("|").split("|")):
                     pos = (index_line, index_sprite)
                     if sprite != '\n':
                         line_fichier.append(sprite)
-                    if sprite == GROUND:
+                    if sprite == constantes.GROUND:
                         empty_sprites.append(pos)
-                    if sprite == GUARDIAN:
+                    if sprite == constantes.GUARDIAN:
                         pos_guard = pos
 
-                    elif sprite == MC_GYVER:
+                    elif sprite == constantes.MC_GYVER:
                         pos_mcgyver = pos
-                matrix_map.append(line_fichier)
+                    matrix_map.append(line_fichier)
 
         self.niveau = matrix_map
         self.empty_sprites = empty_sprites
@@ -76,9 +74,12 @@ class Game:
                             index_line += 1
                         if event.key == pygame.K_UP:
                             index_line -= 1
-                        if self.niveau[index_line][index_sprite] != WALL:
-                            self.niveau[index_line][index_sprite] = MC_GYVER
-                            self.niveau[self.pos_mc[0]][self.pos_mc[1]] = GROUND
+                        if self.niveau[index_line][index_sprite] \
+                                != constantes.WALL:
+                            self.niveau[index_line][index_sprite] \
+                                = constantes.MC_GYVER
+                            self.niveau[self.pos_mc[0]][self.pos_mc[1]] \
+                                = constantes.GROUND
                             self.pos_mc = (index_line, index_sprite)
                             self.affi.draw()
                         if self.pos_mc == self.pos_guard:

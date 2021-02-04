@@ -1,6 +1,5 @@
 import pygame
-from jeux_mac_gyver import constantes
-
+from jeux_mac_gyver import constantes as constantes
 
 class View:
 
@@ -20,8 +19,7 @@ class View:
         self.size_sprite = size_sprite
         self.screen = pygame.display.set_mode(((self.nb_spritesX + 1) * self.size_sprite, self.nb_spritesY * self.size_sprite), 0, 32)
         pygame.display.set_caption("Jeux Mac Gyver")
-        self.background = pygame.image.load(self.sprite_background_img) \
-            .convert()
+        self.background = pygame.image.load(self.sprite_background_img).convert()
         self.walls = pygame.image.load(self.walls_img).convert()
         self.aiguille = pygame.image.load(self.aiguille_img) \
             .convert()
@@ -70,10 +68,13 @@ class View:
         self.screen.blit(self.tube_plastique, (900, 360))
 
     def draw_seringue(self):
-        self.screen.blit(self.seringue, (900, 480))
+        self.screen.blit(self.seringue, (900, 530))
 
     def draw_game_over(self):
         self.screen.blit(self.game_over, (400, 450))
 
     def draw_you_win(self):
         self.screen.blit(self.you_win, (400, 450))
+
+    def mask_obj(self):
+        pygame.draw.rect(self.screen, constantes.BLACK, (900, 120, 70, 400))

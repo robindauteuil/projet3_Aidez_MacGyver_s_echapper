@@ -1,7 +1,9 @@
 import random
-from pygame.locals import *
+
 import pygame
-from jeux_mac_gyver import class_View as View
+from pygame.locals import *
+import sys
+from jeux_mac_gyver.View import View as View
 from jeux_mac_gyver import constantes as constantes
 
 
@@ -50,12 +52,13 @@ class Game:
 
                     elif sprite == constantes.MC_GYVER:
                         pos_mcgyver = pos
-                    matrix_map.append(line_fichier)
+                matrix_map.append(line_fichier)
 
         self.niveau = matrix_map
         self.empty_sprites = empty_sprites
         self.pos_mc = pos_mcgyver
         self.pos_guard = pos_guard
+        print(self.niveau)
 
     def loop(self):
 
@@ -103,7 +106,7 @@ class Game:
 
                         if back_pack == 3:
                             self.affi.draw_seringue()
-
+                            self.affi.mask_obj()
             if event.type == QUIT:
                 self.destroy()
 

@@ -2,7 +2,6 @@ import random
 
 import pygame
 from pygame.locals import *
-import sys
 from jeux_mac_gyver.View import View as View
 from jeux_mac_gyver import constantes as constantes
 
@@ -14,7 +13,7 @@ class Game:
         pygame.init()
         self.niveau = None
         self.pos = None
-        self.load_map('map_file.txt')
+        self.load_map('jeux_mac_gyver/map_file.txt')
         self.affi = View(self.niveau)
         self.place_obj()
 

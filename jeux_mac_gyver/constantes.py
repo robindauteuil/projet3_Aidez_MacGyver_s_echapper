@@ -1,4 +1,5 @@
 import pygame
+
 WALL = 'W'
 MC_GYVER = 'M'
 GROUND = ' '

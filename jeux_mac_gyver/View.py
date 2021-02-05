@@ -1,6 +1,7 @@
 import pygame
 from jeux_mac_gyver import constantes as constantes
 
+
 class View:
 
     def __init__(self, niveau, size_sprite=60, nb_spritesX=15, nb_spritesY=15):
@@ -17,9 +18,12 @@ class View:
         self.nb_spritesX = nb_spritesX
         self.nb_spritesY = nb_spritesY
         self.size_sprite = size_sprite
-        self.screen = pygame.display.set_mode(((self.nb_spritesX + 1) * self.size_sprite, self.nb_spritesY * self.size_sprite), 0, 32)
+        self.screen = pygame.display.set_mode(
+            ((self.nb_spritesX + 1)
+             * self.size_sprite, self.nb_spritesY * self.size_sprite), 0, 32)
         pygame.display.set_caption("Jeux Mac Gyver")
-        self.background = pygame.image.load(self.sprite_background_img).convert()
+        self.background = pygame.image.load(self.sprite_background_img)\
+            .convert()
         self.walls = pygame.image.load(self.walls_img).convert()
         self.aiguille = pygame.image.load(self.aiguille_img) \
             .convert()

@@ -35,12 +35,12 @@ class View:
         self.seringue = pygame.image.load(self.seringue_img).convert()
         self.game_over = pygame.image.load(self.game_over_img).convert()
         self.you_win = pygame.image.load(self.you_win_img).convert()
-        self.niveau = niveau
+        self.level = niveau
 
     def draw(self):
 
         num_l = 0
-        for line in self.niveau:
+        for line in self.level:
             num_c = 0
             for sprite in line:
                 x = num_c * self.size_sprite

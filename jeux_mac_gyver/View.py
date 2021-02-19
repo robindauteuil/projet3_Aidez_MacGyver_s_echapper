@@ -1,18 +1,21 @@
 import pygame
-from jeux_mac_gyver import constantes as constantes
+from jeux_mac_gyver import constantes
 
 
 class View:
 
-    def __init__(self, niveau, size_sprite=60, nb_spritesX=15, nb_spritesY=15):
+    def __init__(self, level, size_sprite=60, nb_spritesX=15, nb_spritesY=15):
+
+        """images are converted and the the screen initialised"""
+
         self.sprite_background_img = 'ressource/floor-tiles-20x20 - sol.png'
-        self.aiguille_img = 'ressource/aiguille.png'
+        self.needle_img = 'ressource/aiguille.png'
         self.ether_img = 'ressource/ether.png'
         self.tube_plastique_img = 'ressource/tube_plastique.png'
         self.guardian_img = 'ressource/gardien.png'
         self.walls_img = 'ressource/floor-tiles-20x20-mur.png'
         self.Mc_Gyver_img = 'ressource/MacGyver.png'
-        self.seringue_img = 'ressource/seringue.png'
+        self.syringe_img = 'ressource/seringue.png'
         self.game_over_img = 'ressource/game_over.png'
         self.you_win_img = 'ressource/you_win.png'
         self.nb_spritesX = nb_spritesX
@@ -25,19 +28,22 @@ class View:
         self.background = pygame.image.load(self.sprite_background_img)\
             .convert()
         self.walls = pygame.image.load(self.walls_img).convert()
-        self.aiguille = pygame.image.load(self.aiguille_img) \
+        self.needle = pygame.image.load(self.needle_img) \
             .convert()
         self.tube_plastique = pygame.image.load(self.tube_plastique_img) \
             .convert()
         self.guardian = pygame.image.load(self.guardian_img).convert()
         self.ether = pygame.image.load(self.ether_img).convert()
         self.player = pygame.image.load(self.Mc_Gyver_img).convert()
-        self.seringue = pygame.image.load(self.seringue_img).convert()
+        self.syringe = pygame.image.load(self.syringe_img).convert()
         self.game_over = pygame.image.load(self.game_over_img).convert()
         self.you_win = pygame.image.load(self.you_win_img).convert()
-        self.level = niveau
+        self.level = level
 
     def draw(self):
+
+        """display the good image at the the good place
+         according to the matrix of the map"""
 
         num_l = 0
         for line in self.level:
@@ -52,7 +58,7 @@ class View:
                 elif sprite == constantes.GUARDIAN:
                     self.screen.blit(self.guardian, (x, y))
                 elif sprite == constantes.AIGUILLE:
-                    self.screen.blit(self.aiguille, (x, y))
+                    self.screen.blit(self.needle, (x, y))
                 elif sprite == constantes.ETHER:
                     self.screen.blit(self.ether, (x, y))
                 elif sprite == constantes.TUBE:
@@ -62,8 +68,8 @@ class View:
                 num_c += 1
             num_l += 1
 
-    def draw_aig(self):
-        self.screen.blit(self.aiguille, (900, 120))
+    def draw_needle(self):
+        self.screen.blit(self.needle, (900, 120))
 
     def draw_ether(self):
         self.screen.blit(self.ether, (900, 240))
@@ -71,8 +77,8 @@ class View:
     def draw_tube(self):
         self.screen.blit(self.tube_plastique, (900, 360))
 
-    def draw_seringue(self):
-        self.screen.blit(self.seringue, (900, 530))
+    def draw_syringe(self):
+        self.screen.blit(self.syringe, (900, 530))
 
     def draw_game_over(self):
         self.screen.blit(self.game_over, (400, 450))

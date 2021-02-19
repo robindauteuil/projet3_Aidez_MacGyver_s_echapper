@@ -10,6 +10,9 @@ class Game:
 
     def __init__(self):
 
+        """ Initialise pygame and call the functions
+         to load the map and place the objects"""
+
         pygame.init()
         self.level = None
         self.pos = None
@@ -17,27 +20,14 @@ class Game:
         self.affi = View(self.level)
         self.place_obj()
 
-    def place_obj(self):
-
-        ran_positions = random.sample(self.empty_sprites, 3)
-        ya, xa = ran_positions[0]
-        yt, xt = ran_positions[1]
-        ye, xe = ran_positions[2]
-        self.level[ya][xa] = constantes.AIGUILLE
-        self.level[yt][xt] = constantes.TUBE
-        self.level[ye][xe] = constantes.ETHER
-        self.pos_aig = (ya, xa)
-        self.pos_tube = (yt, xt)
-        self.pos_ether = (ye, xe)
-
     def load_map(self, file):
+
+        """Read the map file end return the matrix of the map"""
 
         with open(file, 'r') as f:
             matrix_map = []
             empty_sprites = []
             pos_mcgyver = None
-            case_vide = []
-
             for index_line, line in enumerate(f):
                 line_file = []
                 for index_sprite, \
@@ -57,43 +47,62 @@ class Game:
         self.pos_mc = pos_mcgyver
         self.pos_guard = pos_guard
 
+    def place_obj(self):
+
+        """Choose 3 empty sprites and place the objects"""
+
+        ran_positions = random.sample(self.empty_sprites, 3)
+        ya, xa = ran_positions[0]
+        yt, xt = ran_positions[1]
+        ye, xe = ran_positions[2]
+        self.level[ya][xa] = constantes.AIGUILLE
+        self.level[yt][xt] = constantes.TUBE
+        self.level[ye][xe] = constantes.ETHER
+        self.pos_aig = (ya, xa)
+        self.pos_tube = (yt, xt)
+        self.pos_ether = (ye, xe)
+
     def loop(self):
 
-        back_pack = 0
-        self.affi.draw()
+        """infinite event playback loop of the games ,
+         catch the event playback and call the goods functions in
+        consequence """
 
+        self.affi.draw()
+        back_pack = 0
         while True:
+
             for event in pygame.event.get():
                 index_line, index_sprite = self.pos_mc
-
                 if index_line >= 1:
                     if event.type == pygame.KEYDOWN:
                         if event.key == pygame.K_LEFT:
                             index_sprite -= 1
-                        if event.key == pygame.K_RIGHT:
+                        if event.key == pygame.K_RIGHT:  # change the index of the sprite
                             index_sprite += 1
                         if event.key == pygame.K_DOWN:
-                            index_line += 1
-                        if event.key == pygame.K_UP:
+                            if self.pos_mc[0] < 14:
+                                index_line += 1
+                        if event.key == pygame.K_UP:  # change the index of the line
                             index_line -= 1
-                        if self.level[index_line][index_sprite] != constantes.WALL:
+                        if self.level[index_line][index_sprite] \
+                                != constantes.WALL:
                             self.level[index_line][index_sprite] \
-                                = constantes.MC_GYVER
-                            self.level[self.pos_mc[0]][self.pos_mc[1]]\
+                                = constantes.MC_GYVER  # move McGyver according to the news indexes
+                            self.level[self.pos_mc[0]][self.pos_mc[1]] \
                                 = constantes.GROUND
-                            self.pos_mc = (index_line, index_sprite)
+                            self.pos_mc = (index_line, index_sprite)  # attribute the new position of McGyver
                             self.affi.draw()
-                        if self.pos_mc == self.pos_guard:
+                        if self.pos_mc == self.pos_guard:  # display end of game message
                             if back_pack < 3:
                                 self.affi.draw_game_over()
                             if back_pack >= 3:
                                 self.affi.draw_you_win()
-
                         if self.pos_aig == self.pos_mc:
-                            self.affi.draw_aig()
+                            self.affi.draw_needle()
                             self.pos_aig = 0
                             back_pack += 1
-                        if self.pos_tube == self.pos_mc:
+                        if self.pos_tube == self.pos_mc:  # pick up the objects
                             self.affi.draw_tube()
                             back_pack += 1
                             self.pos_tube = 0
@@ -101,15 +110,16 @@ class Game:
                             self.affi.draw_ether()
                             back_pack += 1
                             self.pos_ether = 0
-
-                        if back_pack == 3:
-                            self.affi.draw_seringue()
+                        if back_pack == 3:  # call the function to display the syringe when all the objects are pickep up
+                            self.affi.draw_syringe()
                             self.affi.mask_obj()
                 if event.type == QUIT:
                     self.destroy()
-
             pygame.display.update()
 
     def destroy(self):
+
+        """class destructor """
+
         pygame.quit()
         exit()

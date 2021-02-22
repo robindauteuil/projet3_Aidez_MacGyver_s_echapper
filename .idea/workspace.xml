@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="63eeb52d-a179-4c94-ae4f-5adf9e4308a4" name="Default Changelist" comment="git commit -m &quot;jeux_fini&quot;">
+      <change beforePath="$PROJECT_DIR$/mc_gyver_package.egg-info/dependency_links.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Include/site/python3.8/pygame/include/pygame_mixer.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Include/site/python3.8/pygame/scrap.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/pip-21.0.1.dist-info/WHEEL" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/pip/_internal/cli/autocompletion.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/pip/_internal/commands/cache.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/pip/_internal/commands/check.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/pip/_internal/commands/download.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/pip/_internal/exceptions.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/pip/_internal/network/auth.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/pip/_internal/network/download.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/pip/_internal/operations/build/wheel_legacy.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/pip/_internal/operations/check.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/pip/_internal/resolution/resolvelib/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/pip/_internal/utils/typing.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/pip/_internal/vcs/versioncontrol.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/pip/_vendor/cachecontrol/caches/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/pip/_vendor/cachecontrol/filewrapper.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/pip/_vendor/certifi/__main__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/pip/_vendor/chardet/charsetprober.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/pip/_vendor/chardet/cp949prober.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/pip/_vendor/chardet/langhebrewmodel.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/pip/_vendor/chardet/mbcsgroupprober.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/pip/_vendor/colorama/ansi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/pip/_vendor/colorama/win32.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/pip/_vendor/contextlib2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/pip/_vendor/distro.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/pip/_vendor/html5lib/_trie/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/pip/_vendor/html5lib/treebuilders/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/pip/_vendor/idna/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/pip/_vendor/idna/compat.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/pip/_vendor/msgpack/fallback.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/pip/_vendor/packaging/version.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/pip/_vendor/requests/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/pip/_vendor/requests/__version__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/pip/_vendor/requests/adapters.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/pip/_vendor/requests/structures.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/pip/_vendor/resolvelib/compat/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/pip/_vendor/urllib3/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/pip/_vendor/urllib3/_collections.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/pip/_vendor/urllib3/connection.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/pip/_vendor/urllib3/contrib/_securetransport/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/pip/_vendor/urllib3/packages/backports/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/pygame-2.0.0.dist-info/RECORD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/pygame/_dummybackend.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/pygame/_freetype.cp38-win_amd64.pyd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/pygame/compat.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/pygame/event.pyi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/pygame/examples/README.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/pygame/examples/data/alien1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/pygame/examples/data/background.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/pygame/examples/glcube.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/pygame/examples/midi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/pygame/examples/scroll.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/pygame/examples/setmodescale.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/pygame/freesansbold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/pygame/libjpeg-9.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/pygame/midi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/pygame/pygame.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/pygame/pygame_icon.tiff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/pygame/pypm.cp38-win_amd64.pyd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/pygame/rwobject.cp38-win_amd64.pyd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/pygame/tests/bufferproxy_test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/pygame/tests/fixtures/xbm_cursors/white_sizing.xbm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/pygame/tests/font_tags.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/pygame/tests/freetype_test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/pygame/tests/key_test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/pygame/tests/pixelcopy_test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/pygame/tests/run_tests__tests/everything/sleep_test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/pygame/tests/run_tests__tests/incomplete/fake_3_test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/pygame/tests/run_tests__tests/print_stderr/fake_4_test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/pygame/tests/test_test_.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/pygame/tests/test_utils/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/pygame/tests/test_utils/run_tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/setuptools-49.2.1.dist-info/METADATA" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/setuptools/_deprecation_warning.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/setuptools/_distutils/command/build_ext.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/setuptools/_distutils/cygwinccompiler.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/setuptools/_distutils/dir_util.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/setuptools/_distutils/unixccompiler.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/setuptools/_vendor/packaging/_compat.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/setuptools/_vendor/packaging/markers.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/setuptools/_vendor/packaging/tags.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/setuptools/archive_util.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/setuptools/cli-32.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/setuptools/cli-64.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/setuptools/command/install_egg_info.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/setuptools/extension.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/setuptools/monkey.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/setuptools/package_index.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/setuptools/py27compat.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/Lib/site-packages/setuptools/wheel.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-env/pyvenv.cfg" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JupyterTrust" id="f0a0a195-e240-4a88-86f7-79a982634145" />
+  <component name="ProjectId" id="1kQGJFVDlCfM1pbwFhRihUBdRLa" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="TEXT" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../../Documents and Settings" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\robin\OneDrive\Documents\openclass\projet_3\jeux_mac_gyver" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="projet_3" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\robin\OneDrive\Documents\openclass\projet_3\jeux_mac_gyver\main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="63eeb52d-a179-4c94-ae4f-5adf9e4308a4" name="Default Changelist" comment="" />
+      <created>1605625327711</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1605625327711</updated>
+      <workItem from="1605625372943" duration="52309000" />
+      <workItem from="1606841256186" duration="41000" />
+      <workItem from="1606892754271" duration="65109000" />
+      <workItem from="1608204245914" duration="110450000" />
+      <workItem from="1610668511433" duration="15293000" />
+      <workItem from="1611053787217" duration="53052000" />
+      <workItem from="1611677126260" duration="20875000" />
+      <workItem from="1612191175603" duration="23000" />
+      <workItem from="1612192650490" duration="1442000" />
+      <workItem from="1612263207408" duration="95314000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="git commit -m &quot;jeux_presque_fini&quot;" />
+    <MESSAGE value="git commit -m &quot;jeux_fini&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="git commit -m &quot;jeux_fini&quot;" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="586" y="243" key="#Inspections" timestamp="1612190340518">
+      <screen x="0" y="71" width="1920" height="969" />
+    </state>
+    <state x="586" y="219" key="#Inspections/-1600.42.1600.818/0.42.1920.998@0.42.1920.998" timestamp="1610981232072" />
+    <state x="586" y="243" key="#Inspections/-1600.71.1600.789/0.71.1920.969@0.71.1920.969" timestamp="1612190340518" />
+    <state x="254" y="85" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606893441254">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="254" y="85" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.860@0.0.1600.860" timestamp="1606893441254" />
+    <state x="676" y="299" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1611574276807">
+      <screen x="0" y="42" width="1920" height="998" />
+    </state>
+    <state x="563" y="253" key="#com.intellij.fileTypes.FileTypeChooser/0.42.1600.818@0.42.1600.818" timestamp="1611213298620" />
+    <state x="676" y="299" key="#com.intellij.fileTypes.FileTypeChooser/1920.353.1600.818/0.42.1920.998@0.42.1920.998" timestamp="1611574276807" />
+    <state x="576" y="201" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1610462694868">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="480" y="166" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1600.860@0.0.1600.860" timestamp="1608204050479" />
+    <state x="576" y="201" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/1920.311.1600.860/0.0.1920.1040@0.0.1920.1040" timestamp="1610462694868" />
+    <state x="580" y="185" key="FileChooserDialogImpl" timestamp="1606487768323">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="580" y="185" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1606487768322" />
+    <state width="1557" height="222" key="GridCell.Tab.0.bottom" timestamp="1608204116442">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1557" height="222" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1608204116442" />
+    <state width="1557" height="222" key="GridCell.Tab.0.center" timestamp="1608204116442">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1557" height="222" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1608204116442" />
+    <state width="1557" height="222" key="GridCell.Tab.0.left" timestamp="1608204116442">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1557" height="222" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1608204116442" />
+    <state width="1557" height="222" key="GridCell.Tab.0.right" timestamp="1608204116442">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1557" height="222" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1608204116442" />
+    <state width="1557" height="276" key="GridCell.Tab.1.bottom" timestamp="1608204116427">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1557" height="276" key="GridCell.Tab.1.bottom/0.0.1600.860@0.0.1600.860" timestamp="1608204116427" />
+    <state width="1557" height="276" key="GridCell.Tab.1.center" timestamp="1608204116426">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1557" height="276" key="GridCell.Tab.1.center/0.0.1600.860@0.0.1600.860" timestamp="1608204116426" />
+    <state width="1557" height="276" key="GridCell.Tab.1.left" timestamp="1608204116426">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1557" height="276" key="GridCell.Tab.1.left/0.0.1600.860@0.0.1600.860" timestamp="1608204116426" />
+    <state width="1557" height="276" key="GridCell.Tab.1.right" timestamp="1608204116427">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1557" height="276" key="GridCell.Tab.1.right/0.0.1600.860@0.0.1600.860" timestamp="1608204116427" />
+    <state x="361" y="129" key="SettingsEditor" timestamp="1611574487117">
+      <screen x="0" y="42" width="1920" height="998" />
+    </state>
+    <state x="301" y="75" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1608203448279" />
+    <state x="361" y="129" key="SettingsEditor/1920.353.1600.818/0.42.1920.998@0.42.1920.998" timestamp="1611574487117" />
+    <state x="391" y="187" key="Vcs.Push.Dialog.v2" timestamp="1613937313661">
+      <screen x="0" y="42" width="1600" height="818" />
+    </state>
+    <state x="391" y="187" key="Vcs.Push.Dialog.v2/0.42.1600.818@0.42.1600.818" timestamp="1613937313661" />
+    <state x="463" y="181" key="search.everywhere.popup" timestamp="1611212759244">
+      <screen x="0" y="42" width="1600" height="818" />
+    </state>
+    <state x="463" y="181" key="search.everywhere.popup/0.42.1600.818@0.42.1600.818" timestamp="1611212759244" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="filename" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/jeux_mac_guyver_py$main.coverage" NAME="main Coverage Results" MODIFIED="1608042872234" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>

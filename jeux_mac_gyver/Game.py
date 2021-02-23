@@ -16,7 +16,7 @@ class Game:
         pygame.init()
         self.level = None
         self.pos = None
-        self.load_map('jeux_mac_gyver/map_file.txt')
+        self.load_map('map_file.txt')
         self.affi = View(self.level)
         self.place_obj()
 

@@ -1,0 +1,3 @@
+mc-gyver-package==0.1.0
+pygame==2.0.0
+

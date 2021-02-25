@@ -8,16 +8,16 @@ class View:
 
         """images are converted and the the screen initialised"""
 
-        self.sprite_background_img = 'ressource/floor-tiles-20x20 - sol.png'
-        self.needle_img = 'ressource/aiguille.png'
-        self.ether_img = 'ressource/ether.png'
-        self.tube_plastique_img = 'ressource/tube_plastique.png'
-        self.guardian_img = 'ressource/gardien.png'
-        self.walls_img = 'ressource/floor-tiles-20x20-mur.png'
-        self.Mc_Gyver_img = 'ressource/MacGyver.png'
-        self.syringe_img = 'ressource/seringue.png'
-        self.game_over_img = 'ressource/game_over.png'
-        self.you_win_img = 'ressource/you_win.png'
+        self.sprite_background_img = 'jeux_mac_gyver/ressource/floor-tiles-20x20 - sol.png'
+        self.needle_img = 'jeux_mac_gyver/ressource/aiguille.png'
+        self.ether_img = 'jeux_mac_gyver/ressource/ether.png'
+        self.tube_plastique_img = 'jeux_mac_gyver/ressource/tube_plastique.png'
+        self.guardian_img = 'jeux_mac_gyver/ressource/gardien.png'
+        self.walls_img = 'jeux_mac_gyver/ressource/floor-tiles-20x20-mur.png'
+        self.Mc_Gyver_img = 'jeux_mac_gyver/ressource/MacGyver.png'
+        self.syringe_img = 'jeux_mac_gyver/ressource/seringue.png'
+        self.game_over_img = 'jeux_mac_gyver/ressource/game_over.png'
+        self.you_win_img = 'jeux_mac_gyver/ressource/you_win.png'
         self.nb_spritesX = nb_spritesX
         self.nb_spritesY = nb_spritesY
         self.size_sprite = size_sprite
